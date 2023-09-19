@@ -1,0 +1,16 @@
+{% extends 'front/base.html' %}
+
+
+{% block body %}
+    <h1>Add a Task.</h1>
+
+    <form action="{% url 'front:add' %}" method="post">
+        {% csrf_token %}
+        {{ form }} 
+        <input type="submit">
+    </form>
+
+    <script src="" async defer></script>
+    
+{% endblock body %}
+    
